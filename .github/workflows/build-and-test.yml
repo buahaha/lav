@@ -20,7 +20,6 @@ on:
 
 jobs:
   build-devcontainer:
-    if: ${{ false }}  # disable for now
     name: "Devcontainer: ${{ matrix.host.os }}/${{ matrix.configuration }}"
     strategy:
       fail-fast: false
@@ -61,6 +60,7 @@ jobs:
         CODECOV_JSON: .build/${{ matrix.configuration }}/codecov/*.json
 
   build-native:
+    if: ${{ false }}  # disable for now
     name: "Native: ${{ matrix.host.os }}/${{ matrix.configuration }}"
     strategy:
       fail-fast: false
