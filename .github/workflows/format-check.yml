@@ -20,7 +20,6 @@ on:
 
 jobs:
   build:
-    if: ${{ false }}  # disable for now
     name: Format check
     runs-on: ubuntu-latest
     steps:
